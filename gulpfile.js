@@ -1,10 +1,17 @@
 var gulp = require('gulp'),
 	gulpif = require('gulp-if'),
 	uglify = require('gulp-uglify'),
+	less = require('gulp-less'),
 	minifyCss = require('gulp-minify-css'),
 	useref = require('gulp-useref'),
 	watch = require('gulp-watch'),
 	server = require('gulp-server-livereload');
+
+gulp.task('less', function() {
+	return gulp.src('src/less/**/*.less')
+			.pipe(less())
+			.pipe(gulp.dest('src/css/'));
+});
 
 gulp.task('bundle', function() {
 	var assets = useref.assets();
@@ -18,7 +25,10 @@ gulp.task('bundle', function() {
 });
 
 gulp.task('watch', function() {
-	gulp.watch(['src/**/*.*'], function() {
+	gulp.watch('src/**/*.less', function() {
+		gulp.start('less');
+	});
+	gulp.watch(['src/**/*.js', 'src/**/*.css', 'src/**/*.html'], function() {
 		gulp.start('bundle');
 	});
 });

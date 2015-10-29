@@ -1,0 +1,39 @@
+@mainBg: #E9E9E9;
+@contentBg: #CCC;
+
+.pure-g [class *= "pure-u"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	boz-sizing: border-box;
+}
+body {
+	background: @mainBg;
+}
+header {
+	background: red;
+	> div {
+		margin: 0 auto;
+		background: #FFF;
+	}
+	@media screen and (min-width: 1280px) {
+		> div {
+			width: 1280px;
+		}
+	}
+}
+@media screen and (min-width: 1440px) {
+	main {
+		margin: 0 3%;
+	}
+}
+.container {
+	width: 100%;
+	background: @contentBg;
+}
+.marginless {
+	margin: 0;
+}
+.blocks {
+	height: 100px;
+	border: 1px solid #000;
+}

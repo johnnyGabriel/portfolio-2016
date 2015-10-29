@@ -4,28 +4,35 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Responsivo</title>
-        <!-- build:css 	assets/css/combined.css -->
+        <!-- build:css assets/css/combined.css -->
         <link rel="stylesheet" href="libs/pure/base-min.css">
         <link rel="stylesheet" href="libs/pure/pure-min.css">
-        <link rel="stylesheet" href="libs/pure/grids-min.css">
+        <link rel="stylesheet" href="libs/pure/grids-responsive-min.css">
         <link rel="stylesheet" href="css/main.css">
         <!-- endbuild -->
     </head>
     <body>
-        <div style="width: 800px; margin: auto; background: gray" class="container">
+        <div class="container">
             <header>
-                {header}
+                <div>
+                    <h1 class="marginless">header</h1>
+                </div>
             </header>
             <main>
-                {conteudo}
+                <div class="pure-g">
+                    <div class="blocks pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></div>
+                    <div class="blocks pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></div>
+                    <div class="blocks pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></div>
+                    <div class="blocks pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></div>
+                    <div class="blocks pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></div>
+                    <div class="blocks pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></div>
+                    <div class="blocks pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></div>
+                    <div class="blocks pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></div>
+                    <div class="blocks pure-u-1 pure-u-md-1-2 pure-u-xl-1-3"></div>
+                </div>
             </main>
-            <footer>
-                {footer}
-            </footer>
         </div>
         <!-- build:js assets/js/combined.js -->
-        <script src="js/main.js"></script>
-        <script src="js/main2.js"></script>
         <!-- endbuild -->
     </body>
 </html>
