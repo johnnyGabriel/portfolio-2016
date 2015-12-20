@@ -18,7 +18,9 @@ gulp.task('bundle', function() {
 	return gulp.src('src/*.html')
 			.pipe(assets)
 			.pipe(gulpif('*.js', uglify()))
-			.pipe(gulpif('*.css', minifyCss()))
+			.pipe(gulpif('*.css', minifyCss({
+				aggressiveMerging: false
+			})))
 			.pipe(assets.restore())
 			.pipe(useref())
 			.pipe(gulp.dest('build'));
@@ -41,3 +43,7 @@ gulp.task('server', function() {
 				defaultFile: 'index.html'
 			}));
 });
+
+gulp.task('build', ['watch', 'server']);
+
+gulp.task('default', ['build']);

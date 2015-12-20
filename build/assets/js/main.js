@@ -1,0 +1,1 @@
+$(function(){$.adaptiveBackground.run({normalizeTextColor:!0})});

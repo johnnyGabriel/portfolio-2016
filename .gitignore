@@ -1,2 +1,5 @@
+img-raw/
 node_modules/
 src/libs/
+tarefas.txt
+*.cache

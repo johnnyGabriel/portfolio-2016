@@ -1,6 +1,6 @@
 {
-  "name": "responsivo",
-  "version": "0.0.0",
+  "name": "Portfólio 2016",
+  "version": "1.0.0",
   "authors": [
     "Johnny Gabriel <johnny_gabriel@outlook.com>"
   ],
@@ -18,6 +18,8 @@
     "tests"
   ],
   "dependencies": {
-    "pure": "~0.6.0"
+    "pure": "~0.6.0",
+    "adaptive.background": "~1.0.3",
+    "jquery": "1.11.1"
   }
 }
